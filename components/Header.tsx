@@ -3,6 +3,7 @@ import React from 'react'
 import { ThemeToggle } from './ThemeToggle'
 import { cn } from '@/lib/utils';
 import Link from 'next/link';
+import { UserMenu } from './UserMenu';
 interface HeaderProps {
   className?: string;
 }
@@ -21,8 +22,11 @@ export const Header = ({className}: HeaderProps) => {
         >
           Kanbanmon
         </Link>
-        <div className="border-l pl-4 dark:border-gray-800">
-            <ThemeToggle />
+        <div className="flex items-center gap-4">
+            <UserMenu />
+            <div className="border-l pl-4 dark:border-gray-800">
+                <ThemeToggle />
+            </div>
         </div>
       </div>
     </header>
